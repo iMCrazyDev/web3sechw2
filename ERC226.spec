@@ -3,7 +3,6 @@ rule onlyCreatorCanChangeCreator() {
     address prev = creator(e);
     require e.msg.sender != prev;
 
-
     changeCreator(e);
 
     assert creator(e) == prev;
